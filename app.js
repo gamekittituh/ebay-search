@@ -30,9 +30,9 @@ app.post("/search", async (req, res) => {
       const price = $(element).find(".s-item__price").text();
       const image = $(element).find(".s-item__image-wrapper img").attr("src");
       const link = $(element).find(".s-item__link").attr("href");
-
+      const affiliateLink = link + "&affilid=5717685";
       if (title && price) {
-        items.push({ title, price, image, link });
+        items.push({ title, price, image, affiliateLink });
       }
     });
 
